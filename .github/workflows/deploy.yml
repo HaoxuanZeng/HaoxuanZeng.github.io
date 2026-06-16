@@ -106,3 +106,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: _site
+          repository-name: HaoxuanZeng/HaoxuanZeng.github.io # publish to the public Pages repo
+          branch: main # user sites must serve from the default branch
+          ssh-key: ${{ secrets.DEPLOY_KEY }} # deploy key with write access to the public repo
+          single-commit: true # keep only one commit on the public repo — no source history leaks
